@@ -2,7 +2,7 @@ class Statistics {
 
     constructor() {
 
-        this.gameResults = [{win: true, bid: 2}, {win: false, bid: -10}, {win: false, bid: -10}];
+        this.gameResults = [];
 
     }
 
@@ -16,7 +16,7 @@ class Statistics {
 
         }
 
-        console.log(gameResult);
+        // console.log(gameResult);
         this.gameResults.push(gameResult)
     }
 
@@ -28,7 +28,7 @@ class Statistics {
         let wins = this.gameResults.filter(result => result.win).length;
         //sprawdzanie ilości przegranych
         let losses = this.gameResults.filter(result =>!result.win).length;
-        console.log(games, wins, losses);
+        // console.log(games, wins, losses);
         // zwraca ilośc gier, wygranych i przegranych
         return [games, wins, losses];
     }
